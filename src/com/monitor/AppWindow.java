@@ -99,6 +99,7 @@ public class AppWindow {
 				rdbtnmntmPodsumowanieOglne.setSelected(false);
 				panel.setVisible(false);				
 				overallPanel.setVisible(false);
+				frame.getContentPane().add(inputPanel);
 				inputPanel.setVisible(true);
 				rdbtnmntmSemestr.setSelected(true);
 			}
@@ -110,6 +111,7 @@ public class AppWindow {
 				rdbtnmntmPodsumowanieOglne.setSelected(true);
 				panel.setVisible(false);
 				inputPanel.setVisible(false);
+				frame.getContentPane().add(overallPanel);
 				overallPanel.setVisible(true);
 				rdbtnmntmSemestr.setSelected(false);
 			}
