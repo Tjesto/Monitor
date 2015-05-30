@@ -21,7 +21,6 @@ public class MonthlyTableModel implements TableModel {
 	public MonthlyTableModel(String[] subjects, boolean isSecondTerm) {
 		this.subjects = subjects;
 		this.isSecondTerm = isSecondTerm;
-		System.out.println(isSecondTerm);
 		values = new int[subjects.length][getColumnCount() - 2];
 	}
 	
@@ -52,9 +51,7 @@ public class MonthlyTableModel implements TableModel {
 			return columns[totalLessons];
 		}
 		
-		String header =  isSecondTerm ? columns[arg0 + secondTermOffset] : columns[arg0];
-		System.err.println(header);
-		return header;
+		return isSecondTerm ? columns[arg0 + secondTermOffset] : columns[arg0];
 	}
 
 	@Override
