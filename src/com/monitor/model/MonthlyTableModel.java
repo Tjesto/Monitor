@@ -29,7 +29,7 @@ public class MonthlyTableModel implements TableModel {
 	protected HashMap<Integer, String> classList;
 
 	public MonthlyTableModel(String classId, int year, boolean isSecondTerm) {
-		
+
 		classList = dataBaseManager.getClassesNames();
 		int id = 0;
 		for (int key : classList.keySet()) {
@@ -48,23 +48,21 @@ public class MonthlyTableModel implements TableModel {
 		for (String s : set) {
 			subjects.add(s);
 		}
-		/*uzupelnianie values zerami*/
+		/* uzupelnianie values zerami */
 		for (int j = 0; j < subjects.size(); j++) {
 			values.add(new ArrayList<Integer>());
 			for (int i = 0; i < 10; i++) {
 				values.get(j).add(0);
 			}
 		}
-		
-			for(int i = 0 ; i< subjects.size(); i++)
-			{
-				for( ClassSubject cs : csl )
-				{
-					if( cs.getSubjectName().equals(subjects.get(i)) ){
-						values.get(i).set(cs.getMonth(), cs.getRealized()) ;
-					}
+
+		for (int i = 0; i < subjects.size(); i++) {
+			for (ClassSubject cs : csl) {
+				if (cs.getSubjectName().equals(subjects.get(i))) {
+					values.get(i).set(cs.getMonth(), cs.getRealized());
 				}
 			}
+		}
 
 		/* dataBaseManager.get */
 
@@ -117,7 +115,11 @@ public class MonthlyTableModel implements TableModel {
 		case 6:
 			return sum(row);
 		}
-		return values.get(row).get(col - 1);
+		if (isSecondTerm == false) {
+			return values.get(row).get(col - 1);
+		} else {
+			return values.get(row).get(col - 1 + 5);
+		}
 	}
 
 	private Integer sum(int row) {
@@ -146,7 +148,7 @@ public class MonthlyTableModel implements TableModel {
 	public void setValueAt(Object val, int row, int col) {
 		if (isCellEditable(row, col)) {
 			if (val instanceof Integer) {
-				values.get(row).set(col - 1, (int) val) ;
+				values.get(row).set(col - 1, (int) val);
 			}
 		}
 

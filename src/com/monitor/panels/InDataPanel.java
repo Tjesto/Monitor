@@ -129,6 +129,7 @@ public class InDataPanel extends JPanel {
 		JLabel lblRokSzkolny = new JLabel("Rok szkolny");
 		panel_3.add(lblRokSzkolny);
 		panel_3.add(yearChooser);
+		yearChooser.addItemListener(listenerTermChooser);
 
 		JScrollPane scrollPane = new JScrollPane();
 		add(scrollPane, BorderLayout.CENTER);
