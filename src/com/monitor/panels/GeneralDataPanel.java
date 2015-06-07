@@ -3,6 +3,9 @@ package com.monitor.panels;
 import java.awt.BorderLayout;
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
 
 import javax.swing.BoxLayout;
 import javax.swing.JComboBox;
@@ -11,13 +14,18 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
 
+import com.monitor.dataBaseManager.Class;
+import com.monitor.dataBaseManager.DataBaseManager;
 import com.monitor.model.GeneralTableModel;
 import com.monitor.model.MonthlyTableModel;
 
-public final class GeneralDataPanel extends JPanel {	
+public final class GeneralDataPanel extends JPanel {
+	
+	DataBaseManager dataBaseManager = DataBaseManager.getInstance();
 	
 	protected JTable mainView;
 	protected JComboBox<String> termChooser;
+	protected HashMap<Integer, String> classList;
 
 	public GeneralDataPanel() {
 		setLayout(new BorderLayout(0, 0));
@@ -33,7 +41,14 @@ public final class GeneralDataPanel extends JPanel {
 		JLabel lblKlasa = new JLabel("Klasa");
 		panel_1.add(lblKlasa);
 		
-		JComboBox classChooser = new JComboBox();
+		
+		
+		
+		JComboBox<String> classChooser = new JComboBox<String>();
+		classList = dataBaseManager.getClassesNames();
+		for (int key : classList.keySet()) {
+			classChooser.addItem(classList.get(key));
+		}
 		panel_1.add(classChooser);
 		
 		JPanel panel_2 = new JPanel();
@@ -52,6 +67,7 @@ public final class GeneralDataPanel extends JPanel {
 		
 		JLabel lblRokSzkolny = new JLabel("Rok szkolny");
 		panel_3.add(lblRokSzkolny);
+		
 		
 		JComboBox comboBox = new JComboBox();
 		panel_3.add(comboBox);
