@@ -8,14 +8,14 @@ import java.util.Set;
 import javax.swing.event.TableModelListener;
 import javax.swing.table.TableModel;
 
-import com.monitor.dataBaseManager.ClassSubject;
-import com.monitor.dataBaseManager.DataBaseManager;
+import com.monitor.database.ClassSubject;
+import com.monitor.database.DataBaseManager;
 
 public class MonthlyTableModel implements TableModel {
 
-	private static final String[] columns = new String[] { "Rodzaj zajï¿½ï¿½",
-			"Wrzesieï¿½", "Paï¿½dziernik", "Listopad", "Grudzieï¿½", "Styczeï¿½",
-			"Luty", "Marzec", "Kwiecieï¿½", "Maj", "Czerwiec", "ï¿½ï¿½cznie" };
+	private static final String[] columns = new String[] { "Rodzaj zajêæ",
+			"Wrzesieñ", "PaŸdziernik", "Listopad", "Grudzieñ", "Styczeñ",
+			"Luty", "Marzec", "Kwiecieñ", "Maj", "Czerwiec", "£¹cznie" };
 
 	DataBaseManager dataBaseManager = DataBaseManager.getInstance();
 	private static final int lessonKind = 0;
@@ -31,6 +31,16 @@ public class MonthlyTableModel implements TableModel {
 	public MonthlyTableModel(String classId, int year, boolean isSecondTerm) {
 
 		classList = dataBaseManager.getClassesNames();
+		initialize(classId, year);
+
+		/* dataBaseManager.get */
+
+		/* this.subjects = subjects; */
+		this.isSecondTerm = isSecondTerm;
+		/* values = new int[subjects.length][getColumnCount() - 2]; */
+	}
+
+	private void initialize(String classId, int year) {
 		int id = 0;
 		for (int key : classList.keySet()) {
 			if (classList.get(key).equals(classId)) {
@@ -63,12 +73,6 @@ public class MonthlyTableModel implements TableModel {
 				}
 			}
 		}
-
-		/* dataBaseManager.get */
-
-		/* this.subjects = subjects; */
-		this.isSecondTerm = isSecondTerm;
-		/* values = new int[subjects.length][getColumnCount() - 2]; */
 	}
 
 	@Override

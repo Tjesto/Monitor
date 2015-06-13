@@ -5,6 +5,10 @@ import javax.swing.table.TableModel;
 
 public class GeneralTableModel implements TableModel {
 
+	private static final String[] columns = new String[] { "Rodzaj zajêæ",
+			"Zrealizowano", "Zaplanowano",
+			"Minimum programowe" };
+	
 	@Override
 	public void addTableModelListener(TableModelListener arg0) {
 		// TODO Auto-generated method stub
@@ -20,12 +24,14 @@ public class GeneralTableModel implements TableModel {
 	@Override
 	public int getColumnCount() {
 		// TODO Auto-generated method stub
-		return 0;
+		return 7;
 	}
 
 	@Override
 	public String getColumnName(int arg0) {
-		// TODO Auto-generated method stub
+		if (arg == 0) {
+			return columns[0];
+		}
 		return null;
 	}
 

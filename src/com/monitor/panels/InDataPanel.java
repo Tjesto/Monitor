@@ -18,8 +18,8 @@ import javax.swing.JLabel;
 import javax.swing.JComboBox;
 import javax.swing.JTable;
 
-import com.monitor.dataBaseManager.Class;
-import com.monitor.dataBaseManager.DataBaseManager;
+import com.monitor.database.Class;
+import com.monitor.database.DataBaseManager;
 import com.monitor.model.MonthlyTableModel;
 
 import javax.swing.JScrollPane;

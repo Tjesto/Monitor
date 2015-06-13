@@ -14,8 +14,8 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
 
-import com.monitor.dataBaseManager.Class;
-import com.monitor.dataBaseManager.DataBaseManager;
+import com.monitor.database.Class;
+import com.monitor.database.DataBaseManager;
 import com.monitor.model.GeneralTableModel;
 import com.monitor.model.MonthlyTableModel;
 

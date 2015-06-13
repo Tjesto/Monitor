@@ -1,0 +1,9 @@
+G:\Monitor\v2\Monitor\Monitor\bin\Debug\Monitor.exe.config
+G:\Monitor\v2\Monitor\Monitor\bin\Debug\Monitor.exe
+G:\Monitor\v2\Monitor\Monitor\bin\Debug\Monitor.pdb
+G:\Monitor\v2\Monitor\Monitor\obj\Debug\Monitor.csprojResolveAssemblyReference.cache
+G:\Monitor\v2\Monitor\Monitor\obj\Debug\Monitor.Form1.resources
+G:\Monitor\v2\Monitor\Monitor\obj\Debug\Monitor.Properties.Resources.resources
+G:\Monitor\v2\Monitor\Monitor\obj\Debug\Monitor.csproj.GenerateResource.Cache
+G:\Monitor\v2\Monitor\Monitor\obj\Debug\Monitor.exe
+G:\Monitor\v2\Monitor\Monitor\obj\Debug\Monitor.pdb
