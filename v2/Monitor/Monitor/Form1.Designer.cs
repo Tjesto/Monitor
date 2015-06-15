@@ -46,13 +46,6 @@
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.subject = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.month1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.month2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.month3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.month4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.month5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -61,6 +54,13 @@
             this.comboBox5 = new System.Windows.Forms.ComboBox();
             this.comboBox6 = new System.Windows.Forms.ComboBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.subject = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.month1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.month2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.month3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.month4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.month5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -247,43 +247,6 @@
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellValueChanged);
             // 
-            // subject
-            // 
-            this.subject.HeaderText = "Rodzaj Zajęć";
-            this.subject.Name = "subject";
-            this.subject.ReadOnly = true;
-            // 
-            // month1
-            // 
-            this.month1.HeaderText = "miesiąc1";
-            this.month1.Name = "month1";
-            // 
-            // month2
-            // 
-            this.month2.HeaderText = "Miesiąc2";
-            this.month2.Name = "month2";
-            // 
-            // month3
-            // 
-            this.month3.HeaderText = "Miesiąc 3";
-            this.month3.Name = "month3";
-            // 
-            // month4
-            // 
-            this.month4.HeaderText = "Miesiąc 4";
-            this.month4.Name = "month4";
-            // 
-            // month5
-            // 
-            this.month5.HeaderText = "Miesiąc 5";
-            this.month5.Name = "month5";
-            // 
-            // total
-            // 
-            this.total.HeaderText = "Łącznie";
-            this.total.Name = "total";
-            this.total.ReadOnly = true;
-            // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.label4);
@@ -375,6 +338,43 @@
             this.dataGridView2.Size = new System.Drawing.Size(799, 492);
             this.dataGridView2.TabIndex = 6;
             // 
+            // subject
+            // 
+            this.subject.HeaderText = "Rodzaj Zajęć";
+            this.subject.Name = "subject";
+            this.subject.ReadOnly = true;
+            // 
+            // month1
+            // 
+            this.month1.HeaderText = "";
+            this.month1.Name = "month1";
+            // 
+            // month2
+            // 
+            this.month2.HeaderText = "";
+            this.month2.Name = "month2";
+            // 
+            // month3
+            // 
+            this.month3.HeaderText = "";
+            this.month3.Name = "month3";
+            // 
+            // month4
+            // 
+            this.month4.HeaderText = "";
+            this.month4.Name = "month4";
+            // 
+            // month5
+            // 
+            this.month5.HeaderText = "";
+            this.month5.Name = "month5";
+            // 
+            // total
+            // 
+            this.total.HeaderText = "Łącznie";
+            this.total.Name = "total";
+            this.total.ReadOnly = true;
+            // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.HeaderText = "Rodzaj Zajęć";
@@ -383,32 +383,32 @@
             // 
             // dataGridViewTextBoxColumn2
             // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "miesiąc1";
+            this.dataGridViewTextBoxColumn2.HeaderText = "";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             // 
             // dataGridViewTextBoxColumn3
             // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "Miesiąc2";
+            this.dataGridViewTextBoxColumn3.HeaderText = "";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             // 
             // dataGridViewTextBoxColumn4
             // 
-            this.dataGridViewTextBoxColumn4.HeaderText = "Miesiąc 3";
+            this.dataGridViewTextBoxColumn4.HeaderText = "";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             // 
             // dataGridViewTextBoxColumn5
             // 
-            this.dataGridViewTextBoxColumn5.HeaderText = "Miesiąc 4";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Zrealizowane godziny";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             // 
             // dataGridViewTextBoxColumn6
             // 
-            this.dataGridViewTextBoxColumn6.HeaderText = "Miesiąc 5";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Zaplanowane godziny";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             // 
             // dataGridViewTextBoxColumn7
             // 
-            this.dataGridViewTextBoxColumn7.HeaderText = "Łącznie";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Minimalna liczba godzin do realizacji";
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
             this.dataGridViewTextBoxColumn7.ReadOnly = true;
             // 
@@ -419,6 +419,7 @@
             this.ClientSize = new System.Drawing.Size(840, 596);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.menuStrip1);
+            this.Location = new System.Drawing.Point(2100, 0);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Monitor Podstawy Programowej";
@@ -458,13 +459,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn subject;
-        private System.Windows.Forms.DataGridViewTextBoxColumn month1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn month2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn month3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn month4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn month5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn total;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
@@ -472,6 +466,13 @@
         private System.Windows.Forms.ComboBox comboBox5;
         private System.Windows.Forms.ComboBox comboBox6;
         private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn subject;
+        private System.Windows.Forms.DataGridViewTextBoxColumn month1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn month2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn month3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn month4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn month5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn total;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
